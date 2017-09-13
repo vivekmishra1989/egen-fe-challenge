@@ -1,0 +1,45 @@
+<div class="add-user-section">
+	<div class="section-header">
+		<span class="bold">Add User</span>
+		<a class="add-user floatR" href="#!/users">&lt; Back</a>
+	</div>
+	<form name="newUserForm">
+	  <div class="form-row">
+	    <div class="form-group col-md-6">
+	      <label for="firstName" class="col-form-label">FirstName:</label>
+	      <input type="text" class="form-control" id="firstName" placeholder="FirstName" ng-model="newUser.firstName">
+	    </div>
+	    <div class="form-group col-md-6">
+	      <label for="lastName" class="col-form-label">LastName</label>
+	      <input type="text" class="form-control" id="lastName" placeholder="LastName" ng-model="newUser.lastName">
+	    </div>
+	  </div>
+	  <div class="form-group col-md-12">
+	    <label for="email" class="col-form-label">Email</label>
+	    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" ng-model="newUser.email">
+	    <span class="orange-text" ng-if="newUserForm.email.$invalid">Email id is not valid</span>
+	  </div>
+	  <div class="form-row">
+	    <div class="form-group col-md-6">
+	      <label for="street" class="col-form-label">Street</label>
+	      <input type="text" class="form-control" id="street" ng-model="newUser.address.street">
+	    </div>
+	    <div class="form-group col-md-6">
+	      <label for="city" class="col-form-label">City</label>
+	      <input type="text" class="form-control" id="city" ng-model="newUser.address.city">
+	    </div>
+	    <div class="form-group col-md-6">
+	      <label for="state" class="col-form-label">State</label>
+	      <input type="text" class="form-control" id="state" ng-model="newUser.address.state">
+	    </div>
+	    <div class="form-group col-md-6">
+	      <label for="country" class="col-form-label">Country</label>
+	      <input type="text" class="form-control" id="country" ng-model="newUser.address.country">
+	    </div>
+	  </div>
+	</form>
+
+	<div>
+		<button class="add-button" ng-click="addUser()" ng-disabled="newUserForm.email.$invalid">Add</button>
+	</div>
+</div>

@@ -1,2 +1,2 @@
-// Define the `phonecatApp` module
-angular.module('phonecatApp', ['phoneList']);
+// Define the `egenFeChallenge` module
+angular.module('egenFeChallenge', ['ngRoute','userList','headerComponent','userDetail','addUser']);

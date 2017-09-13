@@ -1,0 +1,15 @@
+<div class="header-component">
+	<img src="img/egen-logo.png" height="40" width="40">
+	<img src="img/hamburger-icon.PNG" class="floatR" height="40" width="40" ng-click="toggleMenu()" ng-class="{'drawer-open' : menuVisible == true}">
+	<div class="menu-drawer" ng-show="menuVisible">
+		<span class="orange-text bold">Menu</span>
+		<ul>
+			<li>
+				<a href="#!/users" ng-click="toggleMenu()">Users </a>
+			</li>
+			<li>
+				<a href="#!/addUser" ng-click="toggleMenu()">Add a user </a>
+			</li>
+		</ul>
+	</div>
+</div>

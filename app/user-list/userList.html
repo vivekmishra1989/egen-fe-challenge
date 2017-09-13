@@ -1,0 +1,30 @@
+<div class="user-list">
+	<div class="section-header">
+		<span class="bold floatL">{{users}}</span>
+		<a class="add-user floatR" href="#!/addUser">+Add User</a>
+	</div>
+	<table class="table user-table">
+	    <thead>
+	      <tr>
+	      	<th>&nbsp;</th>
+	        <th>Name</th>
+	        <th>Email</th>
+	        <th>City</th>
+	        <th>company</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    	<tr ng-repeat="user in userList">
+			<td>
+				<img class="user-img" ng-src="{{user.profilePic}}" height="30" width="30">
+			</td>
+			<td>
+				<a href="#!/users/{{user.id}}">{{user.firstName + ' ' + user.lastName}}</a>
+			</td>
+			<td>{{user.email}}</td>
+			<td>{{user.address.city}}</td>
+			<td>{{user.company.name}}</td>
+		</tr>
+	    </tbody>
+	</table>
+</div>
